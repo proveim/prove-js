@@ -1,0 +1,149 @@
+{
+  "options": {
+    "properties": {
+      "title": {
+        "title": "Title",
+        "type": "string",
+        "default": "App title"
+      },
+      "text": {
+        "title": "Text",
+        "type": "string",
+        "format": "textarea",
+        "default": "The mission of Eager is to bring the high quality apps and libraries being developed all around the world to every website owner on the internet, no matter how small."
+      },
+      "enabled": {
+        "title": "Enabled",
+        "type": "boolean",
+        "default": true
+      },
+      "thing": {
+        "title": "Thing",
+        "type": "string",
+        "enum": [
+          "a",
+          "b",
+          "c"
+        ],
+        "enumNames": {
+          "a": "Thing A",
+          "b": "Thing B",
+          "c": "Thing C"
+        },
+        "format": "radios",
+        "default": "b"
+      },
+      "logo": {
+        "title": "Logo",
+        "type": "string",
+        "format": "image"
+      },
+      "container": {
+        "title": "Location",
+        "type": "object",
+        "format": "element"
+      },
+      "color": {
+        "title": "Color",
+        "type": "string",
+        "format": "color",
+        "default": "#e90f92"
+      },
+      "size": {
+        "title": "Size",
+        "type": "string",
+        "enum": [
+          "small",
+          "medium"
+        ],
+        "enumNames": {
+          "small": "Small",
+          "medium": "Medium"
+        },
+        "default": "small"
+      },
+      "icons": {
+        "title": "Icons",
+        "type": "object",
+        "properties": {
+          "facebook": {
+            "title": "Facebook",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean"
+              },
+              "username": {
+                "title": "Username",
+                "type": "string",
+                "showIf": {
+                  "icons.facebook.enabled": true
+                }
+              }
+            }
+          },
+          "twitter": {
+            "title": "Twitter",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": true
+              },
+              "username": {
+                "title": "Username",
+                "type": "string",
+                "showIf": {
+                  "icons.twitter.enabled": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "variations": {
+        "title": "Variations",
+        "description": "Specify different texts for each variation.",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Variation text"
+        }
+      },
+      "items": {
+        "title": "Nav Items",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "title": "Nav Item",
+          "properties": {
+            "itemType": {
+              "order": 1,
+              "title": "Type of nav item",
+              "type": "string",
+              "enum": [
+                "label",
+                "link"
+              ],
+              "enumNames": {
+                "label": "Label",
+                "link": "Link"
+              },
+              "default": "link"
+            },
+            "href": {
+              "order": 2,
+              "showIf": {
+                "items[].itemType": "link"
+              },
+              "title": "Link URL",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
