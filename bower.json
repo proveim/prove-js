@@ -1,0 +1,19 @@
+{
+  "name": "prove",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "prove <developers@prove.im>"
+  ],
+  "description": "Prove",
+  "license": "MIT",
+  "homepage": "http://prove.im",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ]
+}

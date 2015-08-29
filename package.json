@@ -1,0 +1,22 @@
+{
+  "name": "@prove/prove",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proveim/prove-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/proveim/prove-node/issues"
+  },
+  "homepage": "https://github.com/proveim/prove-node#readme",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
+}
